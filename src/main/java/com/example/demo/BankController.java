@@ -2,17 +2,24 @@ package com.example.demo;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class BankController {
 		
 	//Assignment 2 - Part 1
-	@GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "greeting";
+	@RequestMapping("/branches/{bank}")
+    public String branches(@PathVariable(value="bank") String bank, Model model) {
+        model.addAttribute("name", bank);
+        return "branches";
     }
+	
+	//Assignment 2 - Part 2
+		@RequestMapping("/services/{bank}")
+	    public String services(@PathVariable(value="bank") String bank, Model model) {
+	        model.addAttribute("name", bank);
+	        return "services";
+	    }
 	
 }

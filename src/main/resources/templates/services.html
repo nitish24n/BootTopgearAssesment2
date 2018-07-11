@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bank Branches</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<center>
+	<h2><p th:text="${name}+' Bank'" /></h2>
+	
+	<br>
+	<h3>
+		<p th:text="'Services of our '+ ${name}+' Bank to our Customers'"/>
+	</h3>
+
+	<table class="data" border="1">
+		<tr>
+			<th>Our Services</th>
+		</tr>
+		<tr>
+			<td>Internet Banking</td>
+		</tr>
+		<tr>
+			<td>6% Interest</td>
+		</tr>
+		<tr>
+			<td>Home loan</td>
+		</tr>
+		<tr>
+			<td>Life Insurance</td>
+		</tr>
+		<tr>
+			<td>24x7 Support</td>
+		</tr>
+	</table>
+	</center>
+</body>
+</html>
