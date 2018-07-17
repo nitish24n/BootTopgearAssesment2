@@ -24,14 +24,5 @@ public class BankController {
 		return "services";
 	}
 
-	// Assignment 2 - Part 2
-	@RequestMapping("/health")
-	public String status(Model model) {
-		String status[] = {"UP","DOWN"};
-		Random random = new Random();
-		int index = random.nextInt(2);
-		model.addAttribute("status", status[index]);
-		return "status";
-	}
 
 }
